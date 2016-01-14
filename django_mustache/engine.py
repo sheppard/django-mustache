@@ -1,5 +1,8 @@
 from django.template.backends.base import BaseEngine
-from django.template.exceptions import TemplateDoesNotExist
+try:
+    from django.template.exceptions import TemplateDoesNotExist
+except ImportError:
+    from django.template.base import TemplateDoesNotExist
 from django.template.context import _builtin_context_processors
 from django.utils.module_loading import import_string
 from django.utils.functional import cached_property
