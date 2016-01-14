@@ -1,0 +1,18 @@
+language: python
+sudo: false
+python:
+ - "2.7"
+ - "3.4"
+env:
+  global:
+   - DRF="djangorestframework"
+  matrix:
+   - DJANGO="django==1.8.8"
+   - DJANGO="django==1.9.1"
+   - DJANGO="django==1.9.1" LINT=1
+install:
+ - pip install $DJANGO
+ - pip install $DRF
+ - pip install flake8
+script:
+ - ./runtests.sh

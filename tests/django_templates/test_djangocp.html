@@ -1,0 +1,12 @@
+<html>
+  <p>conditional is {% if simple.boolean %}true{% endif %}</p>
+  <ul>
+  {% for num in simple.list %}
+    <li>{{ num }}</li>
+  {% endfor %}
+  </ul>
+  <p>user {% if is_authenticated %}is authenticated{% endif %}</p>
+  <p>csrf is {{ csrf_token }}</p>
+  <p>username is {{ user.username }}</p>
+  <p>username is {% with u=user %}{{ u.username }}{% endwith %}</p>
+</html>

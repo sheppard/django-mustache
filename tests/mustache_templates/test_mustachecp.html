@@ -1,0 +1,12 @@
+<html>
+  <p>conditional is {{#simple}}{{#boolean}}true{{/boolean}}{{/simple}}</p>
+  <ul>
+    {{#simple.list}}
+    <li>{{.}}</li>
+    {{/simple.list}}
+  </ul>
+  <p>user {{#is_authenticated}}is authenticated{{/is_authenticated}}</p>
+  <p>csrf is {{csrf_token}}</p>
+  <p>username is {{user.username}}</p>
+  <p>username is {{#user}}{{username}}{{/user}}</p>
+</html>

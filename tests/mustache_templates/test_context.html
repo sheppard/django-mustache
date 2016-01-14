@@ -1,0 +1,17 @@
+<html>
+  <h1>{{test}}</h1>
+  <p>conditional is {{#boolean}}true{{/boolean}}</p>
+  <p>None is "{{none}}"</p>
+  <p>conditional is {{^false}}false{{/false}}</p>
+  <p>nested value is {{nested.value}}</p>
+  <p>nested value is {{#nested}}{{value}}{{/nested}}</p>
+  <p>missing value is {{^missing}}missing{{/missing}}</p>
+  <ul>
+    {{#array}}
+    <li>{{.}}</li>
+    {{/array}}
+  </ul>
+  {{^empty}}
+  <p>empty list</p>
+  {{/empty}}
+</html>
