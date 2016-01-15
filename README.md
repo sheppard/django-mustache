@@ -9,6 +9,17 @@ A number of Pystache/Mustache backends for Django exist, though many are outdate
  * Installable via PyPI
  * Compatible with Django 1.8 and newer
 
+[![Latest PyPI Release](https://img.shields.io/pypi/v/django-mustache.svg)](https://pypi.python.org/pypi/django-mustache)
+[![Release Notes](https://img.shields.io/github/release/wq/django-mustache.svg)](https://github.com/wq/django-mustache/releases)
+[![License](https://img.shields.io/pypi/l/django-mustache.svg)](https://github.com/wq/django-mustache/blob/master/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/wq/django-mustache.svg)](https://github.com/wq/django-mustache/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/wq/django-mustache.svg)](https://github.com/wq/django-mustache/network)
+[![GitHub Issues](https://img.shields.io/github/issues/wq/django-mustache.svg)](https://github.com/wq/django-mustache/issues)
+
+[![Travis Build Status](https://img.shields.io/travis/wq/django-mustache/master.svg)](https://travis-ci.org/wq/django-mustache)
+[![Python Support](https://img.shields.io/pypi/pyversions/django-mustache.svg)](https://pypi.python.org/pypi/django-mustache)
+[![Django Support](https://img.shields.io/badge/Django-1.8%2C%201.9-blue.svg)](https://pypi.python.org/pypi/django-mustache)
+
 ### Usage
 
 ```bash
