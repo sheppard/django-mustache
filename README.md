@@ -1,6 +1,6 @@
 # django-mustache
 
-A straightforward Mustache-powered template engine for Django.  Extracted from [wq.db] and updated to support the new [template backend] infrastructure in Django 1.8 and newer.
+A straightforward Mustache-powered template engine for Django, extracted from [wq.db] and updated to support the new [template backend] infrastructure in Django 1.8 and newer.  *django-mustache* facilitates [progressive enhancement](https://wq.io/docs/website) by allowing you to share the same templates between Django and an offline-capable JavaScript [web app](https://wq.io/docs/web-app).  Combined with a shared [URL structure](https://wq.io/docs/url-structure), this approach ensures that each page in your site can be selectively rendered on the [server or on the client](https://wq.io/docs/templates) as needed.
 
 A number of Pystache/Mustache backends for Django exist, though many are outdated.  Only this library provides all of the following:
 
