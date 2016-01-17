@@ -1,13 +1,16 @@
 # django-mustache
 
-A straightforward Mustache-powered template engine for Django, extracted from [wq.db] and updated to support the new [template backend] infrastructure in Django 1.8 and newer.  *django-mustache* facilitates [progressive enhancement](https://wq.io/docs/website) by allowing you to share the same templates between Django and an offline-capable JavaScript [web app](https://wq.io/docs/web-app).  Combined with a shared [URL structure](https://wq.io/docs/url-structure), this approach ensures that each page in your site can be selectively rendered on the [server or on the client](https://wq.io/docs/templates) as needed.
+A straightforward Mustache-powered template engine for Django, extracted from [wq.db] and updated to support the new [template backend] infrastructure in Django 1.8 and newer.  *django-mustache* facilitates [progressive enhancement] by allowing you to share the same templates between Django and an offline-capable JavaScript [web app].  Combined with a shared [URL structure], this approach ensures that each page in your site can be selectively rendered on the [server or on the client][templates] as needed.
 
 A number of Pystache/Mustache backends for Django exist, though many are outdated.  Only this library provides all of the following:
 
- * Full integration with existing Django context processors like `django.template.context_processors.csrf` and `django.contrib.auth.context_processors.auth`.
+ * Full integration with existing Django context processors like `django.template.context_processors.csrf` and `django.contrib.auth.context_processors.auth`.*
  * Full test suite
  * Installable via PyPI
  * Compatible with Django 1.8 and newer
+
+
+> *[wq/app.js] provides client-side equivalents for these context variables.
 
 [![Latest PyPI Release](https://img.shields.io/pypi/v/django-mustache.svg)](https://pypi.python.org/pypi/django-mustache)
 [![Release Notes](https://img.shields.io/github/release/wq/django-mustache.svg)](https://github.com/wq/django-mustache/releases)
@@ -53,3 +56,8 @@ The following configuration options are supported:
 
 [wq.db]: https://wq.io/wq.db/
 [template backend]: https://docs.djangoproject.com/en/1.9/topics/templates
+[progressive enhancement]: https://wq.io/docs/website
+[web app]: https://wq.io/docs/web-app
+[URL structure]: https://wq.io/docs/url-structure
+[templates]: https://wq.io/docs/templates
+[wq/app.js]: https://wq.io/docs/app-js
