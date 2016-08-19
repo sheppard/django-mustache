@@ -1,5 +1,4 @@
 import os
-import sys
 from setuptools import setup, find_packages
 
 LONG_DESCRIPTION = """
@@ -34,7 +33,7 @@ def parse_markdown_readme():
 
 setup(
     name='django-mustache',
-    version='0.1.0',
+    version='1.0.0',
     author='S. Andrew Sheppard',
     author_email='andrew@wq.io',
     url='https://github.com/wq/django-mustache',
@@ -48,7 +47,7 @@ setup(
     ],
     classifiers=[
         'Framework :: Django',
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
@@ -56,6 +55,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Topic :: Text Processing :: Markup :: HTML',
     ],
     test_suite='tests',
