@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from tests.views import (
     ContextView,
@@ -7,10 +7,9 @@ from tests.views import (
     DjangoCPView,
 )
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url('^context$', ContextView.as_view()),
     url('^partials$', PartialsView.as_view()),
     url('^mustachecp$', MustacheCPView.as_view()),
     url('^djangocp$', DjangoCPView.as_view()),
-)
+]
