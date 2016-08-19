@@ -21,7 +21,7 @@ A number of Pystache/Mustache backends for Django exist, though many are outdate
 
 [![Travis Build Status](https://img.shields.io/travis/wq/django-mustache/master.svg)](https://travis-ci.org/wq/django-mustache)
 [![Python Support](https://img.shields.io/pypi/pyversions/django-mustache.svg)](https://pypi.python.org/pypi/django-mustache)
-[![Django Support](https://img.shields.io/badge/Django-1.8%2C%201.9-blue.svg)](https://pypi.python.org/pypi/django-mustache)
+[![Django Support](https://img.shields.io/badge/Django-1.8%2C%201.9%2C%201.10-blue.svg)](https://pypi.python.org/pypi/django-mustache)
 
 ### Usage
 
@@ -55,7 +55,7 @@ The following configuration options are supported:
  * **file_extension**: File extension to use when searching for templates and partials.  The default is '.html', which should not conflict with existing Django templates as long as completely separate directories are configured for Mustache templates.  Django views typically include the extension in the template name - this is taken into account when searching for templates.
 
 [wq.db]: https://wq.io/wq.db/
-[template backend]: https://docs.djangoproject.com/en/1.9/topics/templates
+[template backend]: https://docs.djangoproject.com/en/1.10/topics/templates
 [progressive enhancement]: https://wq.io/docs/website
 [web app]: https://wq.io/docs/web-app
 [URL structure]: https://wq.io/docs/url-structure
