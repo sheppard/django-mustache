@@ -3,13 +3,15 @@ sudo: false
 python:
  - "2.7"
  - "3.4"
+ - "3.5"
 env:
   global:
-   - DRF="djangorestframework"
+   - DRF="djangorestframework==3.4.5"
   matrix:
-   - DJANGO="django==1.8.8"
-   - DJANGO="django==1.9.1"
-   - DJANGO="django==1.9.1" LINT=1
+   - DJANGO="django==1.8.14"
+   - DJANGO="django==1.9.9"
+   - DJANGO="django==1.10"
+   - DJANGO="django==1.10" LINT=1
 install:
  - pip install $DJANGO
  - pip install $DRF
