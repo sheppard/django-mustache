@@ -37,3 +37,7 @@ class MustacheCPView(View):
 
 class DjangoCPView(View):
     pass
+
+
+class AppTemplateView(View):
+    pass

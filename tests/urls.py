@@ -5,6 +5,7 @@ from tests.views import (
     PartialsView,
     MustacheCPView,
     DjangoCPView,
+    AppTemplateView,
 )
 
 urlpatterns = [
@@ -12,4 +13,5 @@ urlpatterns = [
     url('^partials$', PartialsView.as_view()),
     url('^mustachecp$', MustacheCPView.as_view()),
     url('^djangocp$', DjangoCPView.as_view()),
+    url('^apptemplate$', AppTemplateView.as_view()),
 ]

@@ -16,6 +16,7 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.auth',
+    'tests.test_app',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -37,7 +38,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django_mustache.Mustache',
         'DIRS': ['tests/mustache_templates'],
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': context_processors,
         }

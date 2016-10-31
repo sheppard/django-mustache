@@ -41,6 +41,16 @@ class MustacheTestCase(APITestCase):
             """
         )
 
+    def test_app_dirs(self):
+        self.check_html(
+            '/apptemplate',
+            """
+            <html>
+              <p>test</p>
+            </html>
+            """
+        )
+
     def check_html(self, url, expected_html):
         response = self.client.get(url)
         self.assertTrue(status.is_success(response.status_code), response.data)

@@ -19,6 +19,9 @@ class Mustache(BaseEngine):
     """
     Mustache template backend for Django 1.8+
     """
+
+    app_dirname = "mustache"
+
     def __init__(self, params):
         params = params.copy()
         self.options = params.pop('OPTIONS').copy()
