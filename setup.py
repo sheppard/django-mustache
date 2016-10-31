@@ -33,7 +33,7 @@ def parse_markdown_readme():
 
 setup(
     name='django-mustache',
-    version='1.0.0',
+    version='1.0.1-dev',
     author='S. Andrew Sheppard',
     author_email='andrew@wq.io',
     url='https://github.com/wq/django-mustache',
