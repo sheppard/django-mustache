@@ -79,7 +79,7 @@ class Template(object):
         if request:
             for fn in self.backend.template_context_processors:
                 contexts.append(fn(request))
-                
+
         contexts.append(context)
 
         return self.backend.engine.render(
