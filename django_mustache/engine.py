@@ -70,10 +70,16 @@ class Template(object):
         self.template = template
         self.backend = backend
 
-    def render(self, context, request):
+    def render(self, context, request=None):
         contexts = []
-        for fn in self.backend.template_context_processors:
-            contexts.append(fn(request))
+
+        if not request:
+            request = context.get('request', None)
+
+        if request:
+            for fn in self.backend.template_context_processors:
+                contexts.append(fn(request))
+                
         contexts.append(context)
 
         return self.backend.engine.render(
