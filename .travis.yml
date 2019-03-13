@@ -1,20 +1,47 @@
 language: python
-sudo: false
-python:
- - "2.7"
- - "3.4"
- - "3.5"
+dist: xenial
 env:
   global:
-   - DRF="djangorestframework==3.5.3"
-  matrix:
-   - DJANGO="django==1.8.16"
-   - DJANGO="django==1.9.11"
-   - DJANGO="django==1.10.3"
-   - DJANGO="django==1.10.3" LINT=1
+    - DRF="djangorestframework==3.9.1"
+    - DJANGO="django==2.1.7"
+matrix:
+  include:
+    - python: "2.7"
+      name: "Python 2.7 (Django 1.8)"
+      env:
+        - DJANGO="django==1.8.19"
+        - DRF="djangorestframework==3.6.4"
+    - python: "3.5"
+      name: "Python 3.5 (Django 1.8)"
+      env:
+        - DJANGO="django==1.8.19"
+        - DRF="djangorestframework==3.6.4"
+    - python: "2.7"
+      name: "Python 2.7 (Django 1.11)"
+      env:
+        - DJANGO="django==1.11.20"
+    - python: "3.7"
+      name: "Python 3.7 (Django 1.11)"
+      env:
+        - DJANGO="django==1.11.20"
+    - python: "3.4"
+      name: "Python 3.4"
+      env:
+        - DJANGO="django==2.0.13"
+    - python: "3.5"
+      name: "Python 3.5"
+      env: []
+    - python: "3.6"
+      name: "Python 3.6"
+      env: []
+    - python: "3.7"
+      name: "Python 3.7"
+      env: []
+    - python: "3.7"
+      name: "Code Lint"
+      env:
+        - LINT="flake8"
 install:
- - pip install $DJANGO
- - pip install $DRF
- - pip install flake8
+ - pip install $DJANGO $DRF $LINT
 script:
  - ./runtests.sh

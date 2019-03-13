@@ -1,4 +1,3 @@
-import os
 from setuptools import setup, find_packages
 
 LONG_DESCRIPTION = """
@@ -6,26 +5,9 @@ Mustache template engine for Django 1.8 and newer, with support for Django conte
 """
 
 
-def parse_markdown_readme():
-    """
-    Convert README.md to RST via pandoc, and load into memory
-    (fallback to LONG_DESCRIPTION on failure)
-    """
-    # Attempt to run pandoc on markdown file
-    import subprocess
+def readme():
     try:
-        subprocess.call(
-            ['pandoc', '-t', 'rst', '-o', 'README.rst', 'README.md']
-        )
-    except OSError:
-        return LONG_DESCRIPTION
-
-    # Attempt to load output
-    try:
-        readme = open(os.path.join(
-            os.path.dirname(__file__),
-            'README.rst'
-        ))
+        readme = open("README.md")
     except IOError:
         return LONG_DESCRIPTION
     return readme.read()
@@ -33,14 +15,15 @@ def parse_markdown_readme():
 
 setup(
     name='django-mustache',
-    version='1.1.1-dev',
+    use_scm_version=True,
     author='S. Andrew Sheppard',
     author_email='andrew@wq.io',
     url='https://github.com/wq/django-mustache',
     license='MIT',
     packages=['django_mustache'],
     description=LONG_DESCRIPTION.strip(),
-    long_description=parse_markdown_readme(),
+    long_description=readme(),
+    long_description_content_type='text/markdown',
     install_requires=[
         'Django>=1.8',
         'pystache',
@@ -56,10 +39,22 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+
+        'Framework :: Django',
+        'Framework :: Django :: 1.8',
+        'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.1',
+
         'Topic :: Text Processing :: Markup :: HTML',
     ],
     test_suite='tests',
     tests_require=[
         'djangorestframework'
+    ],
+    setup_requires=[
+        'setuptools_scm',
     ],
 )
