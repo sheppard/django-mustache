@@ -9,5 +9,5 @@ def simple(request):
 
 def is_authenticated(request):
     return {
-        'is_authenticated': request.user and request.user.is_authenticated()
+        'is_authenticated': request.user and request.user.is_authenticated
     }
