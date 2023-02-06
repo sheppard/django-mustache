@@ -19,7 +19,6 @@ A number of Pystache/Mustache backends for Django exist, though many are outdate
 [![GitHub Forks](https://img.shields.io/github/forks/wq/django-mustache.svg)](https://github.com/wq/django-mustache/network)
 [![GitHub Issues](https://img.shields.io/github/issues/wq/django-mustache.svg)](https://github.com/wq/django-mustache/issues)
 
-[![Travis Build Status](https://img.shields.io/travis/wq/django-mustache/master.svg)](https://travis-ci.org/wq/django-mustache)
 [![Python Support](https://img.shields.io/pypi/pyversions/django-mustache.svg)](https://pypi.org/project/django-mustache)
 [![Django Support](https://img.shields.io/pypi/djversions/django-mustache.svg)](https://pypi.org/project/django-mustache)
 

@@ -26,7 +26,7 @@ setup(
     long_description_content_type='text/markdown',
     install_requires=[
         'Django>=1.8',
-        'pystache',
+        'pystache<0.6',
     ],
     classifiers=[
         'Framework :: Django',
@@ -42,6 +42,9 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
 
         'Framework :: Django',
         'Framework :: Django :: 1.8',
@@ -50,6 +53,10 @@ setup(
         'Framework :: Django :: 2.1',
         'Framework :: Django :: 2.2',
         'Framework :: Django :: 3.0',
+        'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
+        'Framework :: Django :: 4.1',
 
         'Topic :: Text Processing :: Markup :: HTML',
     ],
