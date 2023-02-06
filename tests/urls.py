@@ -1,4 +1,7 @@
-from django.conf.urls import url
+try:
+    from django.urls import re_path
+except ImportError:
+    from django.conf.urls import url as re_path
 
 from tests.views import (
     ContextView,
@@ -9,9 +12,9 @@ from tests.views import (
 )
 
 urlpatterns = [
-    url('^context$', ContextView.as_view()),
-    url('^partials$', PartialsView.as_view()),
-    url('^mustachecp$', MustacheCPView.as_view()),
-    url('^djangocp$', DjangoCPView.as_view()),
-    url('^apptemplate$', AppTemplateView.as_view()),
+    re_path('^context$', ContextView.as_view()),
+    re_path('^partials$', PartialsView.as_view()),
+    re_path('^mustachecp$', MustacheCPView.as_view()),
+    re_path('^djangocp$', DjangoCPView.as_view()),
+    re_path('^apptemplate$', AppTemplateView.as_view()),
 ]
